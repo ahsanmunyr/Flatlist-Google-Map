@@ -31,5 +31,5 @@ Welcome to our project! This project aims to be a strong foundation for react-na
 ## Android Preview
 
 
-https://github.com/ahsanmunyr/interviewTest/assets/28112558/1eed2f3f-17ec-4b7d-9f86-5aa76ba3d40f
+![gif]https://github.com/ahsanmunyr/interviewTest/assets/28112558/bf578472-7d3e-4968-a8c8-1cf48dcf9703
 
