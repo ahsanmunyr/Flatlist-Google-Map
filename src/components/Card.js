@@ -33,64 +33,29 @@ const Card = ({index, data, image, lat, long, thumbnail, scrollX}) => {
   });
 
   return (
-    <View style={{width: ITEM_SIZE, height: responsiveScreenHeight(40)}}>
-      <Animated.View
-        style={{
-          marginHorizontal: SPACING,
-          // padding: SPACING * 2,
-          // alignItems: 'center',
-          transform: [{translateY}],
-          // height: responsiveScreenHeight(20),
-          // backgroundColor:'green',
-          borderRadius: responsiveScreenHeight(1),
-        }}>
+    <View style={styles.main}>
+      <Animated.View style={[styles.animatedView, {transform: [{translateY}]}]}>
         <ImageBackground
-          
           style={styles.posterImage}
           borderTopRightRadius={responsiveScreenFontSize(1)}
           borderTopLeftRadius={responsiveScreenFontSize(1)}
           source={{uri: image}}>
-          <View
-            style={{
-              // width: '80%',
-              alignSelf: 'center',
-              left:0,
-              borderTopRightRadius: responsiveScreenFontSize(3),
-              borderBottomRightRadius: responsiveScreenFontSize(3),
-              // height: responsiveScreenHeight(5),
-              backgroundColor: '#592dfa',
-              justifyContent: 'center',
-              alignItems: 'flex-start',
-              position: 'absolute',
-              top: responsiveScreenHeight(2),
-              paddingHorizontal: responsiveScreenFontSize(1),
-              paddingVertical: responsiveScreenFontSize(1),
-            }}>
-            <Text
-              style={{
-                color: 'white',
-                fontSize: responsiveScreenFontSize(1.8),
-                fontWeight: '500',
-                // width: '80%',
-              }}
-              numberOfLines={2}>
+          <View style={styles.imageView}>
+            <Text style={styles.name} numberOfLines={2}>
               {data?.name}
             </Text>
           </View>
         </ImageBackground>
-        <View style={{
-          height: responsiveScreenHeight(12),
-          width: '100%',
-         backgroundColor:'white',
-         paddingHorizontal: responsiveScreenFontSize(1),
-         paddingVertical: responsiveScreenFontSize(0.1),
-          borderBottomRightRadius: responsiveScreenFontSize(1),
-          borderBottomLeftRadius:responsiveScreenFontSize(1)
-        }}>
-          <Text style={{color:'black', fontWeight:'400', fontSize:responsiveScreenFontSize(1.5)}}>Food Policy</Text>
-          <Text numberOfLines={2} style={{fontSize:responsiveScreenFontSize(1.2),color:'grey'}}>{data?.food_policy == "" ? "We don't have any food policy.": data?.food_policy}</Text>
+        <View style={styles.content}>
+          <Text style={styles.foodPolicy}>Food Policy</Text>
+          <Text
+            numberOfLines={2}
+            style={{fontSize: responsiveScreenFontSize(1.2), color: 'grey'}}>
+            {data?.food_policy == ''
+              ? "We don't have any food policy."
+              : data?.food_policy}
+          </Text>
         </View>
-       
       </Animated.View>
     </View>
   );
@@ -118,8 +83,49 @@ const styles = StyleSheet.create({
     resizeMode: 'cover',
     borderRadius: responsiveScreenFontSize(1),
     margin: 0,
-    backgroundColor:'white'
+    backgroundColor: 'white',
     // marginBottom: 30,
+  },
+  content: {
+    height: responsiveScreenHeight(12),
+    width: '100%',
+    backgroundColor: 'white',
+    paddingHorizontal: responsiveScreenFontSize(1),
+    paddingVertical: responsiveScreenFontSize(0.1),
+    borderBottomRightRadius: responsiveScreenFontSize(1),
+    borderBottomLeftRadius: responsiveScreenFontSize(1),
+  },
+  imageView: {
+    alignSelf: 'center',
+    left: 0,
+    borderTopRightRadius: responsiveScreenFontSize(3),
+    borderBottomRightRadius: responsiveScreenFontSize(3),
+    // height: responsiveScreenHeight(5),
+    backgroundColor: '#592dfa',
+    justifyContent: 'center',
+    alignItems: 'flex-start',
+    position: 'absolute',
+    top: responsiveScreenHeight(2),
+    paddingHorizontal: responsiveScreenFontSize(1),
+    paddingVertical: responsiveScreenFontSize(1),
+  },
+  name: {
+    color: 'white',
+    fontSize: responsiveScreenFontSize(1.8),
+    fontWeight: '500',
+  },
+  animatedView: {
+    marginHorizontal: SPACING,
+    borderRadius: responsiveScreenHeight(1),
+  },
+  main: {
+    width: ITEM_SIZE,
+    height: responsiveScreenHeight(40),
+  },
+  foodPolicy: {
+    color: 'black',
+    fontWeight: '400',
+    fontSize: responsiveScreenFontSize(1.5),
   },
 });
 
