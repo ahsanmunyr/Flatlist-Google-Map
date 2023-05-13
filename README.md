@@ -34,9 +34,10 @@ Welcome to our project! This project aims to be a strong foundation for react-na
 https://github.com/ahsanmunyr/interviewTest/assets/28112558/b8e81dde-9fa6-4536-9785-32645ab6f486
 
 ## IOS Preview
-![Preview iPhone 14 Pro](https://github.com/ahsanmunyr/interviewTest/assets/28112558/b4f00ef9-e827-4d3b-82d3-a3ba9988793f=250x250)
+<img src="./assets/computer_illustration.jpg" height="200rm" align="right">
+<!-- ![Preview iPhone 14 Pro](https://github.com/ahsanmunyr/interviewTest/assets/28112558/b4f00ef9-e827-4d3b-82d3-a3ba9988793f=250x250)
 ![Preview iPhone 14 Pro](https://github.com/ahsanmunyr/interviewTest/assets/28112558/7f8f12a7-c2f4-4bb5-a310-7cf7869ab673=250x250)
-![Preview iPhone 14 Pro](https://github.com/ahsanmunyr/interviewTest/assets/28112558/bbcb9f99-58d5-4e2a-8b0f-eea541ebcf25=250x250)
+![Preview iPhone 14 Pro](https://github.com/ahsanmunyr/interviewTest/assets/28112558/bbcb9f99-58d5-4e2a-8b0f-eea541ebcf25=250x250) -->
 
 
 
