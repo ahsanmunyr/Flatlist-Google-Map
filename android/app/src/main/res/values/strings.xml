@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">interviewTask</string>
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyBStPDYl2bu_pA_G3XRzWA5eEWc_yBGBx4</string>
+</resources>
