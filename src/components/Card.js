@@ -7,6 +7,7 @@ import {
   Animated,
   StyleSheet,
   ImageBackground,
+  ScrollView,
 } from 'react-native';
 import {
   responsiveWidth,
@@ -72,17 +73,23 @@ const Card = ({index, data, image, lat, long, thumbnail, scrollX}) => {
                 Sorry, there is no facility.
               </Text>
             ) : (
-              <>
-                {data?.facilities?.map((item, index) => {
-                  return (
-                    <Image
-                      key={index}
-                      source={{uri: item?.icon}}
-                      style={{height: 50, width: 50}}
-                    />
-                  );
-                })}
-              </>
+              <ScrollView>
+                <View
+                  style={{
+                    width: '100%',
+                    flexDirection: 'row',
+                  }}>
+                  {data?.facilities?.map((item, index) => {
+                    return (
+                      <Image
+                        key={index}
+                        source={{uri: item?.icon}}
+                        style={{height: 50, width: 50}}
+                      />
+                    );
+                  })}
+                </View>
+              </ScrollView>
             )}
           </View>
         </View>
