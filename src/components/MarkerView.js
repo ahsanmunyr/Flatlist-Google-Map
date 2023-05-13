@@ -27,7 +27,7 @@ const MarkerView = ({ coordinate }) => {
           latitude: coordinate?.latitude,
           longitude: coordinate?.longitude,
           duration,
-          useNativeDriver: true,
+          useNativeDriver: false,
         })
         .start();
     }

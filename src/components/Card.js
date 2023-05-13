@@ -17,7 +17,7 @@ import {
 
 const {width, height} = Dimensions.get('window');
 const SPACING = 10;
-const ITEM_SIZE = Platform.OS === 'ios' ? width * 0.72 : width * 0.95;
+const ITEM_SIZE = Platform.OS === 'ios' ? width * 0.95 : width * 0.95;
 
 const Card = ({index, data, image, lat, long, thumbnail, scrollX}) => {
   const inputRange = [
@@ -108,7 +108,6 @@ const styles = StyleSheet.create({
   },
   posterImage: {
     width: '100%',
-    opacity: 0.8,
     height: responsiveScreenHeight(20),
     resizeMode: 'cover',
     borderRadius: responsiveScreenFontSize(1),

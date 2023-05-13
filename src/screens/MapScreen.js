@@ -17,7 +17,7 @@ import {
 import * as actions from '../store/actions/venueGet';
 import {connect} from 'react-redux';
 import MapView, {
-  PROVIDER_GOOGLE,
+  PROVIDER_GOOGLE,PROVIDER_DEFAULT
 } from 'react-native-maps';
 import {
   responsiveWidth,
@@ -28,7 +28,7 @@ import Card from '../components/Card';
 import Loader from '../components/Loader';
 import MarkerView from '../components/MarkerView';
 const {width} = Dimensions.get('window');
-const ITEM_SIZE = Platform?.OS === 'ios' ? width * 0.72 : width * 0.95;
+const ITEM_SIZE = Platform?.OS === 'ios' ? width * 0.95 : width * 0.95;
 
 const MapScreen = ({venueGet, venueSet}) => {
   const [page, onChangePage] = useState(2);
