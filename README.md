@@ -28,18 +28,15 @@ Welcome to our project! This project aims to be a strong foundation for react-na
 - [redux-thunk](https://github.com/gaearon/redux-thunk) to dispatch asynchronous actions.
 - [jest](https://facebook.github.io/jest/) and [react-native-testing-library](https://callstack.github.io/react-native-testing-library/) for testing.
 
-## Android Preview
-
+## Samsung Note 10 Preview
 
 https://github.com/ahsanmunyr/interviewTest/assets/28112558/b8e81dde-9fa6-4536-9785-32645ab6f486
 
-## IOS Preview
+## IPhone 14 Pro Preview
 <img src="https://github.com/ahsanmunyr/interviewTest/assets/28112558/b4f00ef9-e827-4d3b-82d3-a3ba9988793f" height="500rm" align="center">
 <img src="https://github.com/ahsanmunyr/interviewTest/assets/28112558/7f8f12a7-c2f4-4bb5-a310-7cf7869ab673" height="500rm" align="center">
 <img src="https://github.com/ahsanmunyr/interviewTest/assets/28112558/bbcb9f99-58d5-4e2a-8b0f-eea541ebcf25" height="500rm" align="center">
-<!-- ![Preview iPhone 14 Pro](https://github.com/ahsanmunyr/interviewTest/assets/28112558/b4f00ef9-e827-4d3b-82d3-a3ba9988793f=250x250)
-![Preview iPhone 14 Pro](https://github.com/ahsanmunyr/interviewTest/assets/28112558/7f8f12a7-c2f4-4bb5-a310-7cf7869ab673=250x250)
-![Preview iPhone 14 Pro](https://github.com/ahsanmunyr/interviewTest/assets/28112558/bbcb9f99-58d5-4e2a-8b0f-eea541ebcf25=250x250) -->
+
 
 
 
