@@ -1,11 +1,11 @@
 import React, {useEffect, useRef, useState} from 'react';
-import {Platform} from 'react-native';
-import {AnimatedRegion, MarkerAnimated,} from 'react-native-maps';
+import {Platform, Image,View} from 'react-native';
+import {AnimatedRegion, MarkerAnimated} from 'react-native-maps';
+import { responsiveScreenFontSize } from 'react-native-responsive-dimensions';
 
-const MarkerView = ({ coordinate }) => {
+const MarkerView = ({coordinate, data}) => {
   const duration = 1000;
   const marker = useRef(null);
-
 
   const [coords] = useState(
     new AnimatedRegion({
@@ -33,7 +33,11 @@ const MarkerView = ({ coordinate }) => {
     }
   }, [marker, coordinate, coords]);
 
-  return <MarkerAnimated  ref={marker} coordinate={coords} />;
+  return <MarkerAnimated ref={marker}  coordinate={coords}>
+    <View style={{borderWidth: responsiveScreenFontSize(0.4), backgroundColor:'white', borderColor: 'white', borderRadius:responsiveScreenFontSize(50) }}>
+      <Image style={{height: 50, width: 50,borderRadius:responsiveScreenFontSize(50)}} resizeMode='cover' source={{uri:data?.thumbnail}} />
+      </View>
+  </MarkerAnimated>;
 };
 
 export default MarkerView;

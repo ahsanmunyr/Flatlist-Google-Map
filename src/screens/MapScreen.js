@@ -34,6 +34,7 @@ const MapScreen = ({venueGet, venueSet}) => {
   const [page, onChangePage] = useState(2);
   const [loader, onChangeLoader] = useState(false);
   const [apiCall, onChangeApiCall] = useState(false);
+  const [data, onChangeData] = useState(null);
   const flatListRef = useRef(null);
   const mapRef = useRef(null);
   const scrollX = React.useRef(new Animated.Value(0)).current;
@@ -61,6 +62,7 @@ const MapScreen = ({venueGet, venueSet}) => {
         latitudeDelta: 0.05,
         longitudeDelta: 0.05,
       });
+      onChangeData(viewableItems[0]?.item)
       mapRef.current?.animateCamera({
         center: {
           latitude: viewableItems[0]?.item?.lat,
@@ -134,7 +136,7 @@ const MapScreen = ({venueGet, venueSet}) => {
         style={styles.map}
         ref={mapRef}
         initialRegion={region}>
-        <MarkerView  coordinate={region} />
+        <MarkerView  coordinate={region} data={data} />
       </MapView.Animated>
       <View style={styles.outerFlatlist}>
         <Animated.FlatList
