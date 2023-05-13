@@ -27,3 +27,9 @@ Welcome to our project! This project aims to be a strong foundation for react-na
 - [redux-persist](https://github.com/rt2zz/redux-persist) as persistance layer.
 - [redux-thunk](https://github.com/gaearon/redux-thunk) to dispatch asynchronous actions.
 - [jest](https://facebook.github.io/jest/) and [react-native-testing-library](https://callstack.github.io/react-native-testing-library/) for testing.
+
+## Android Preview
+
+
+https://github.com/ahsanmunyr/interviewTest/assets/28112558/1eed2f3f-17ec-4b7d-9f86-5aa76ba3d40f
+
