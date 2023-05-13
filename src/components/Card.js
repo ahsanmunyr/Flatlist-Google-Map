@@ -55,6 +55,36 @@ const Card = ({index, data, image, lat, long, thumbnail, scrollX}) => {
               ? "We don't have any food policy."
               : data?.food_policy}
           </Text>
+          <Text style={styles.foodPolicy}>Facilities</Text>
+          <View
+            style={{
+              width: '100%',
+              flexDirection: 'row',
+              justifyContent: 'flex-start',
+              alignItems: 'center',
+            }}>
+            {data?.facilities?.length == 0 ? (
+              <Text
+                style={{
+                  fontSize: responsiveScreenFontSize(1.2),
+                  color: 'grey',
+                }}>
+                Sorry, there is no facility.
+              </Text>
+            ) : (
+              <>
+                {data?.facilities?.map((item, index) => {
+                  return (
+                    <Image
+                      key={index}
+                      source={{uri: item?.icon}}
+                      style={{height: 50, width: 50}}
+                    />
+                  );
+                })}
+              </>
+            )}
+          </View>
         </View>
       </Animated.View>
     </View>
@@ -87,7 +117,7 @@ const styles = StyleSheet.create({
     // marginBottom: 30,
   },
   content: {
-    height: responsiveScreenHeight(12),
+    // height: responsiveScreenHeight(12),
     width: '100%',
     backgroundColor: 'white',
     paddingHorizontal: responsiveScreenFontSize(1),
