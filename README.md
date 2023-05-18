@@ -1,4 +1,4 @@
-# Interview-Task
+# Task
 
 ## Description
 Welcome to our project! This project aims to be a strong foundation for react-native applications. It provides a clear and organized structure, managing store with redux and Google Map.
